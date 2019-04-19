@@ -15,11 +15,36 @@ struct AuthenticateStore {
     static let userName = "username"
     static let passWord = "password"
     static let httpMethod = "POST"
+    static let sessionId = ""
+    static let jsonFormat = "applicaiton/json"
+    static let contentType = "Content-Type"
     //Raw Value is String
     enum UserInfo: String {
-        case userInputName = "darinjswilliams@icloud.com"
-        case passWordInput = "Armenia0608"
+        case emailAddress = "darinjswilliams@icloud.com"
+        case passWord = "Armenia0608"
         case udacity = "udacity"
+    }
+    
+    enum Endpoints {
+        static let base = "https://onthemap-api.udacity.com/v1/session"
+       
+        case login
+        case logout
+        case body
+        
+        var stringValue: String {
+            switch self {
+            case .login: return Endpoints.base
+                
+            case .body: return "{\"udacity\": {\"username\": \"\(UserInfo.emailAddress)\", \"password\": \"\(UserInfo.passWord)\"}}"
+            case .logout: return ""
+  
+            }
+        }
+        
+        var url: URL {
+            return URL(string: stringValue)!
+        }
     }
     
 }

@@ -12,37 +12,29 @@ import UIKit
 class LoginViewController: UIViewController {
 
     
-    @IBOutlet weak var userName: UITextField!
-    
-    @IBOutlet weak var passWord: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passWordTextField: UITextField!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        emailTextField.text = ""
+        passWordTextField.text = ""
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
    //Seque to Main page after sucessful login
     private func sucessfulLogin() {
         
-        let mainController =  self.storyboard?.instantiateViewController(withIdentifier: "HomeTabBarController") as! UINavigationController
+        let mainController =  self.storyboard?.instantiateViewController(withIdentifier: "HomeTabBarController") as! UITabBarController
         self.present(mainController, animated: true, completion: nil)
     }
     
     @IBAction func loginButton(_ sender: Any) {
         //authenticate user against Udacity's Servers
+        OnTheMapRestClient.loginClient(username: self.emailTextField.text ?? "", password: self.passWordTextField.text ?? "", completionHandler: self.handleLoginResponse(success:error:))
         
         //unsuccesful login siginal unsucessful login
         
@@ -53,6 +45,14 @@ class LoginViewController: UIViewController {
     
     @IBAction func signUpButton(_ sender: Any) {
       //Send to sign up page if not a valid udacity user
+        
+    }
+    
+    func handleLoginResponse(success: Bool, error: Error?) {
+        if success {
+            print ("Successful Login")
+            sucessfulLogin()
+        }
         
     }
     
