@@ -12,6 +12,7 @@
 		C83057A52266D6FC00A3176B /* AuthenticateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83057A42266D6FC00A3176B /* AuthenticateStore.swift */; };
 		C83057DE2268423E00A3176B /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83057DD2268423D00A3176B /* LoginRequest.swift */; };
 		C83057E022698CBE00A3176B /* LoginResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83057DF22698CBE00A3176B /* LoginResponse.swift */; };
+		C83057E2226A8A4C00A3176B /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83057E1226A8A4C00A3176B /* EndPoints.swift */; };
 		C8B9D48F226428630055EB0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B9D48E226428630055EB0B /* AppDelegate.swift */; };
 		C8B9D491226428630055EB0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B9D490226428630055EB0B /* ViewController.swift */; };
 		C8B9D494226428630055EB0B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8B9D492226428630055EB0B /* Main.storyboard */; };
@@ -19,6 +20,8 @@
 		C8B9D499226428640055EB0B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8B9D498226428640055EB0B /* Assets.xcassets */; };
 		C8B9D49C226428640055EB0B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8B9D49A226428640055EB0B /* LaunchScreen.storyboard */; };
 		C8B9D4A7226428640055EB0B /* OnTheMapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B9D4A6226428640055EB0B /* OnTheMapTests.swift */; };
+		C8CCE489226AD5B5005BB8EB /* NetworkAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CCE488226AD5B5005BB8EB /* NetworkAPI.swift */; };
+		C8CCE48B226ADD3A005BB8EB /* SessionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8CCE48A226ADD3A005BB8EB /* SessionResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +40,7 @@
 		C83057A42266D6FC00A3176B /* AuthenticateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateStore.swift; sourceTree = "<group>"; };
 		C83057DD2268423D00A3176B /* LoginRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		C83057DF22698CBE00A3176B /* LoginResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResponse.swift; sourceTree = "<group>"; };
+		C83057E1226A8A4C00A3176B /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
 		C8B9D48B226428630055EB0B /* OnTheMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OnTheMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8B9D48E226428630055EB0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8B9D490226428630055EB0B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +52,8 @@
 		C8B9D4A2226428640055EB0B /* OnTheMapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnTheMapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8B9D4A6226428640055EB0B /* OnTheMapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnTheMapTests.swift; sourceTree = "<group>"; };
 		C8B9D4A8226428640055EB0B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8CCE488226AD5B5005BB8EB /* NetworkAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkAPI.swift; sourceTree = "<group>"; };
+		C8CCE48A226ADD3A005BB8EB /* SessionResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,9 @@
 				C83057A42266D6FC00A3176B /* AuthenticateStore.swift */,
 				C83057DD2268423D00A3176B /* LoginRequest.swift */,
 				C83057DF22698CBE00A3176B /* LoginResponse.swift */,
+				C83057E1226A8A4C00A3176B /* EndPoints.swift */,
+				C8CCE488226AD5B5005BB8EB /* NetworkAPI.swift */,
+				C8CCE48A226ADD3A005BB8EB /* SessionResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -231,7 +240,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8CCE48B226ADD3A005BB8EB /* SessionResponse.swift in Sources */,
 				C83057A12265818100A3176B /* LoginViewController.swift in Sources */,
+				C8CCE489226AD5B5005BB8EB /* NetworkAPI.swift in Sources */,
+				C83057E2226A8A4C00A3176B /* EndPoints.swift in Sources */,
 				C8B9D497226428630055EB0B /* OnTheMap.xcdatamodeld in Sources */,
 				C83057A52266D6FC00A3176B /* AuthenticateStore.swift in Sources */,
 				C8B9D491226428630055EB0B /* ViewController.swift in Sources */,

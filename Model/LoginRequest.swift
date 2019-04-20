@@ -8,8 +8,11 @@
 
 import Foundation
 
-struct LoginRequest: Codable {
+struct LoginRequest: Encodable {
+    let udacity: UserCredentials
+}
+
+struct UserCredentials: Encodable {
     let username: String
     let password: String
-    let authorizationToken: String 
 }
