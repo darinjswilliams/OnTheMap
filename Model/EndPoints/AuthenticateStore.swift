@@ -22,5 +22,8 @@ struct AuthenticateStore {
     static let headerContentType = "Content-Type"
     static let headerAccept = "Accept"
     static let headerPost = "POST"
+    static let headerGet = "GET"
+    static let headerDelete = "DELETE"
+    static let limit = "100"
     
 }
