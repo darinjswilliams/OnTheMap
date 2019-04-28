@@ -17,7 +17,7 @@ struct AuthenticateStore {
     static let userName = "username"
     static let passWord = "password"
     
-    static let sessionId = ""
+    static var sessionId = ""
     static let headerJsonFormat = "application/json"
     static let headerContentType = "Content-Type"
     static let headerAccept = "Accept"
@@ -25,5 +25,11 @@ struct AuthenticateStore {
     static let headerGet = "GET"
     static let headerDelete = "DELETE"
     static let limit = "100"
+    static var userKey = ""
+    static var headerUserKey = "User-Key"
+    static var parseAppId = "QrX47CA9cyuGewLdsL7o5Eb8iug6Em8ye0dnAbIr"
+    static var parseApiKey = "QuWThTdiRmTux3YaDseUSEpUKo7aBYM737yKd4gY"
+    static var headerParseAppId = "X-Parse-Application-Id"
+    static var headerParseAppKey = "X-Parse-REST-API-Key"
     
 }

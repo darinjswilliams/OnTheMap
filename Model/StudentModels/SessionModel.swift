@@ -13,3 +13,4 @@ struct SessionModel: Codable {
     static var session: SessionResponse?
     static var students: [StudentLocations] = []
 }
+

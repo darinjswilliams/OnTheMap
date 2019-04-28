@@ -93,7 +93,6 @@
 		C830579E2265807500A3176B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C83057A22266D64F00A3176B /* OnTheMapRestClient.swift */,
 				C83057DD2268423D00A3176B /* LoginRequest.swift */,
 				C83057DF22698CBE00A3176B /* LoginResponse.swift */,
 				C8E64053226FE81300CF66FA /* EndPoints */,
@@ -119,6 +118,7 @@
 		C8755974226BD3380059F917 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				C83057A22266D64F00A3176B /* OnTheMapRestClient.swift */,
 				C83A55CE226C17FB00E8E52E /* SessionResponse.swift */,
 				C87632EA226ECDE800193143 /* ParseClient.swift */,
 			);

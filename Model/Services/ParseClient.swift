@@ -13,8 +13,9 @@ class ParseClient {
 
     
     class func getStudentList(completion: @escaping ([StudentLocations]?, Error?)-> Void){
+//
         requestGetStudents(url: EndPoints.getStudentLimit.url) { (response, error) in
-            
+        
             guard let response = response else {
                 print("requestLimitedStudents: Failed")
                 completion(nil, error)
@@ -25,6 +26,19 @@ class ParseClient {
         }
     }
     
+    class func getSortedStudentList(completion: @escaping ([StudentLocations]?, Error?)-> Void){
+        
+        requestGetStudents(url: EndPoints.getStudentOrder.url) { (response, error) in
+            
+            guard let response = response else {
+                print("requestSortedStudentLists: Failed")
+                completion(nil, error)
+                return
+            }
+            print("getStudentList..\(response)")
+            completion(response,error)
+        }
+    }
     
     
     

@@ -21,3 +21,24 @@ struct StudentData: Codable {
         case studentUrl = "_image_url"
     }
 }
+
+
+struct UserProfile {
+    var last_name: String
+    var first_name: String
+    var nickname: String
+    
+}
+
+
+extension UserProfile: Codable {
+    enum CodingKeys: String, CodingKey {
+        case last_name = "last_name"
+        case first_name = "first_name"
+        case nickname = "nickname"
+    }
+}
+
+
+
+

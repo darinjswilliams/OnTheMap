@@ -21,8 +21,41 @@ struct StudentLocations: Codable {
     let mediaURL:  String?
     let latitude:  Double?
     let longitude: Double?
+    
+ 
+    var studenFullName: String {
+        
+        var studentName: String
+        
+        guard let fname = firstName, !fname.isEmpty,
+              let  lname = lastName, !lname.isEmpty else {
+            return  "No first name Or last Name"
+        }
+        
+        studentName = fname + lname
+        
+        return studentName
+        
+    }
+    
+    
+    
+    var studentUrl: String {
+        
+        //Validate against nil and empty
+        guard let  mUrl = mediaURL, !mUrl.isEmpty else {
+            return ""
+        }
+        
+        return mUrl
+    }
 }
 
 struct SingleStudent: Codable {
-    let results: StudentLocations
+    let result: StudentLocations
+}
+
+
+struct StudentInfo: Codable {
+    let nickname: String
 }
